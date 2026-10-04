@@ -1,0 +1,15 @@
+# Fictional broker showing the email method. Not a real site.
+schema_version: 1
+name: Example Background Reports
+site: TODO_VERIFY
+opt_out:
+  method: email
+  email: TODO_VERIFY
+required_fields:
+  - full_name
+  - current_address
+  - dob
+verification: none
+relist_interval_days: 180
+notes: Fictional entry used as a template for brokers that only take requests by email.
+last_verified: null

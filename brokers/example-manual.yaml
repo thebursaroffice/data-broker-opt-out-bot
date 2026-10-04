@@ -1,0 +1,16 @@
+# Fictional broker showing the manual method. Not a real site.
+schema_version: 1
+name: Example Records Directory
+site: TODO_VERIFY
+opt_out:
+  method: manual
+required_fields:
+  - full_name
+  - phone
+  - past_addresses
+verification: id_upload
+relist_interval_days: 60
+notes: >
+  Fictional entry used as a template for brokers whose process can't be
+  automated (e.g. phone call or mailed letter). Describe the steps here.
+last_verified: null

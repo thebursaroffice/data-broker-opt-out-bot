@@ -1,0 +1,21 @@
+# Fictional broker showing the web_form method. Not a real site.
+schema_version: 1
+name: Example People Search
+site: TODO_VERIFY
+opt_out:
+  method: web_form
+  url: TODO_VERIFY
+required_fields:
+  - first_name
+  - last_name
+  - city
+  - state
+  - listing_url
+  - email
+verification: email
+search_url_pattern: TODO_VERIFY
+relist_interval_days: 90
+notes: >
+  Fictional entry used as a template. Copy this file, rename it to the
+  broker's id, and replace every placeholder after checking the live site.
+last_verified: null
