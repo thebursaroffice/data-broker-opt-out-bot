@@ -3,7 +3,7 @@
 A local-first CLI for getting your personal info removed from data broker sites,
 tracking each request, and catching it when you get relisted.
 
-**Status:** early development. Only the broker registry works so far.
+**Status:** early development. The broker registry and encrypted profile work so far.
 
 ## Privacy
 
@@ -12,6 +12,24 @@ tracking each request, and catching it when you get relisted.
 - No telemetry, analytics, or update checks.
 - Profile data is encrypted at rest and never written to logs.
 - Anything that needs a human (CAPTCHAs, ID checks) is handed back to you, never bypassed.
+
+## Your profile
+
+```
+unlisted profile init               # prompts for each field; all optional
+unlisted profile init --passphrase  # use a passphrase instead of the OS keyring
+unlisted profile show               # masked; add --reveal to see values
+unlisted profile edit
+```
+
+The profile is encrypted before it touches disk. By default the key lives in
+your OS keyring (Keychain on macOS). If no secure keyring is available, or you
+pass `--passphrase`, you'll be asked for a passphrase instead. **There is no
+recovery**: lose the keyring entry or the passphrase and the profile has to be
+re-entered.
+
+Data is stored in your OS's per-user data folder. Use `--data-dir` or
+`UNLISTED_DATA_DIR` to put it somewhere else.
 
 ## Brokers
 
